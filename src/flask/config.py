@@ -39,7 +39,7 @@ class ConfigAttribute(t.Generic[T]):
         rv = obj.config[self.__name__]
 
         if self.get_converter is not None:
-            rv = self.get_converter(rv)
+            rv = None
 
         return rv  # type: ignore[no-any-return]
 
